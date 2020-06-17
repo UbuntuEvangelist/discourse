@@ -70,8 +70,8 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
+  gem 'rails', '>= 5.0.0', '>= 5.0.0', git: 'https://github.com/rails/rails.git'
+  gem 'actionpack-action_caching', '>= 1.2.0', '>= 1.2.0', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
   gem 'actionpack-action_caching'
@@ -87,12 +87,12 @@ gem 'active_model_serializers'
 
 gem 'onebox'
 
-gem 'ember-rails'
+gem 'ember-rails', '>= 0.14.1'
 gem 'ember-source', '~> 1.2.0.1'
 gem 'handlebars-source', '~> 1.1.2'
 gem 'barber'
 
-gem 'message_bus'
+gem 'message_bus', '>= 0.9.4'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 
 gem 'redcarpet', require: false
@@ -122,13 +122,13 @@ gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri'
-gem 'omniauth'
-gem 'omniauth-openid'
+gem 'omniauth', '>= 1.3.1'
+gem 'omniauth-openid', '>= 1.0.1'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
-gem 'omniauth-twitter'
-gem 'omniauth-github'
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-facebook', '>= 1.6.0'
+gem 'omniauth-twitter', '>= 1.0.1'
+gem 'omniauth-github', '>= 1.1.1'
+gem 'omniauth-oauth2', '>= 1.2.0', require: false
 gem 'oj'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
 gem 'pg', '0.15.1'
@@ -141,19 +141,19 @@ gem 'sanitize'
 gem 'sass'
 gem 'sidekiq'
 gem 'sidekiq-failures'
-gem 'sinatra', require: nil
+gem 'sinatra', '>= 2.0.0', require: nil
 gem 'slim'  # required for sidekiq-web
 
 gem 'therubyracer'
-gem 'thin', require: false
+gem 'thin', '>= 1.6.1', require: false
 gem 'highline', require: false
-gem 'rack-protection' # security
+gem 'rack-protection' , '>= 1.5.2' # security
 
 # Gems used only for assets and not required
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 5.0.5'
   gem 'uglifier'
 end
 
@@ -167,18 +167,18 @@ group :test, :development do
   gem 'listen', '0.7.3', require: false
   gem 'certified', require: false
   gem 'fabrication', require: false
-  gem 'qunit-rails'
+  gem 'qunit-rails', '>= 0.0.7'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '>= 2.14.1', require: false
   gem 'shoulda', require: false
   gem 'simplecov', require: false
   gem 'timecop'
   gem 'rspec-given'
   gem 'pry-rails'
   gem 'pry-nav'
-  gem 'spork-rails'
+  gem 'spork-rails', '>= 4.0.0'
 end
 
 group :development do
@@ -205,12 +205,12 @@ gem 'lru_redux'
 #  we are open to it. by deferring require to the initializer we can configure discourse installs without it
 
 gem 'flamegraph', require: false
-gem 'rack-mini-profiler', require: false
+gem 'rack-mini-profiler', '>= 0.9.0', require: false
 
 # used for caching, optional
 gem 'rack-cors', require: false
-gem 'unicorn', require: false
-gem 'puma', require: false
+gem 'unicorn', '>= 4.8.2', require: false
+gem 'puma', '>= 2.12.0', require: false
 gem 'rbtrace', require: false, platform: :mri
 
 # required for feed importing and embedding
