@@ -95,7 +95,7 @@ gem 'barber'
 gem 'message_bus'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 
-gem 'redcarpet', require: false
+gem 'redcarpet', '>= 3.5.1', require: false
 gem 'airbrake', '3.1.2', require: false # errbit is broken with 3.1.3 for now
 gem 'eventmachine'
 gem 'fast_xs'
@@ -122,13 +122,13 @@ gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri'
-gem 'omniauth'
+gem 'omniauth', '>= 2.0.0'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 1.6.0'
 gem 'omniauth-twitter'
-gem 'omniauth-github'
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-github', '>= 2.0.0'
+gem 'omniauth-oauth2', '>= 1.7.1', require: false
 gem 'oj'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
 gem 'pg', '0.15.1'
