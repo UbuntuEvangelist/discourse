@@ -126,7 +126,7 @@ gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
 gem 'omniauth-facebook'
-gem 'omniauth-twitter'
+gem 'omniauth-twitter', '>= 1.0.1'
 gem 'omniauth-github'
 gem 'omniauth-oauth2', require: false
 gem 'oj'
