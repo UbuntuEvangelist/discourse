@@ -139,8 +139,8 @@ gem 'rest-client'
 gem 'rinku'
 gem 'sanitize'
 gem 'sass'
-gem 'sidekiq'
-gem 'sidekiq-failures'
+gem 'sidekiq', '>= 2.17.6'
+gem 'sidekiq-failures', '>= 0.3.0'
 gem 'sinatra', require: nil
 gem 'slim'  # required for sidekiq-web
 
@@ -154,7 +154,7 @@ gem 'rack-protection' # security
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
   gem 'sass-rails'
-  gem 'uglifier'
+  gem 'uglifier', '>= 2.4.0'
 end
 
 group :test do
