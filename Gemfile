@@ -85,7 +85,7 @@ gem 'redis', :require => ["redis", "redis/connection/hiredis"]
 gem 'active_model_serializers'
 
 
-gem 'onebox'
+gem 'onebox', '>= 1.2.5'
 
 gem 'ember-rails'
 gem 'ember-source', '~> 1.2.0.1'
@@ -101,7 +101,7 @@ gem 'eventmachine'
 gem 'fast_xs'
 
 gem 'fast_xor'
-gem 'fastimage'
+gem 'fastimage', '>= 1.6.0'
 gem 'fog', '1.18.0', require: false
 gem 'unf', require: false
 
