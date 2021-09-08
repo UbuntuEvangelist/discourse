@@ -85,7 +85,7 @@ gem 'redis', :require => ["redis", "redis/connection/hiredis"]
 gem 'active_model_serializers'
 
 
-gem 'onebox'
+gem 'onebox', '>= 1.8.3'
 
 gem 'ember-rails'
 gem 'ember-source', '~> 1.2.0.1'
@@ -121,7 +121,7 @@ gem 'image_optim', '0.9.1'
 gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.8.2'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
@@ -137,7 +137,7 @@ gem 'rake'
 
 gem 'rest-client'
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 2.1.0'
 gem 'sass'
 gem 'sidekiq'
 gem 'sidekiq-failures'
@@ -182,7 +182,7 @@ group :test, :development do
 end
 
 group :development do
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
   gem 'annotate'
@@ -214,7 +214,7 @@ gem 'puma', require: false
 gem 'rbtrace', require: false, platform: :mri
 
 # required for feed importing and embedding
-gem 'ruby-readability', require: false
+gem 'ruby-readability', '>= 0.6.0', require: false
 gem 'simple-rss', require: false
 gem 'gctools', require: false, platform: :mri_21
 gem 'stackprof', require: false, platform: :mri_21
