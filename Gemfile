@@ -210,7 +210,7 @@ gem 'rack-mini-profiler', require: false
 # used for caching, optional
 gem 'rack-cors', require: false
 gem 'unicorn', require: false
-gem 'puma', require: false
+gem 'puma', '>= 4.3.9', require: false
 gem 'rbtrace', require: false, platform: :mri
 
 # required for feed importing and embedding
