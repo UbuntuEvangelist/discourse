@@ -85,7 +85,7 @@ gem 'redis', :require => ["redis", "redis/connection/hiredis"]
 gem 'active_model_serializers'
 
 
-gem 'onebox'
+gem 'onebox', '>= 1.8.3'
 
 gem 'ember-rails'
 gem 'ember-source', '~> 1.2.0.1'
@@ -121,7 +121,7 @@ gem 'image_optim', '0.9.1'
 gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.13.2'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
