@@ -70,8 +70,8 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
+  gem 'rails', '>= 5.0.0', '>= 5.0.0', git: 'https://github.com/rails/rails.git'
+  gem 'actionpack-action_caching', '>= 1.2.0', '>= 1.2.0', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
   gem 'actionpack-action_caching'
@@ -122,13 +122,13 @@ gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri'
-gem 'omniauth'
+gem 'omniauth', '>= 1.3.1'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '>= 1.2.0', require: false
 gem 'oj'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
 gem 'pg', '0.15.1'
@@ -141,7 +141,7 @@ gem 'sanitize'
 gem 'sass'
 gem 'sidekiq'
 gem 'sidekiq-failures'
-gem 'sinatra', require: nil
+gem 'sinatra', '>= 2.0.0', require: nil
 gem 'slim'  # required for sidekiq-web
 
 gem 'therubyracer'
@@ -153,7 +153,7 @@ gem 'rack-protection' # security
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 5.0.5'
   gem 'uglifier'
 end
 
@@ -210,7 +210,7 @@ gem 'rack-mini-profiler', require: false
 # used for caching, optional
 gem 'rack-cors', require: false
 gem 'unicorn', require: false
-gem 'puma', require: false
+gem 'puma', '>= 2.12.0', require: false
 gem 'rbtrace', require: false, platform: :mri
 
 # required for feed importing and embedding
