@@ -70,7 +70,7 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
+  gem 'rails', '>= 5.2.8.1', '>= 5.2.8.1', git: 'https://github.com/rails/rails.git'
   gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
