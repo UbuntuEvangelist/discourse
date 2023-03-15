@@ -70,13 +70,13 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
+  gem 'rails', '>= 6.1.7.3', '>= 6.1.7.3', git: 'https://github.com/rails/rails.git'
+  gem 'actionpack-action_caching', '>= 1.2.1', '>= 1.2.1', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
   gem 'actionpack-action_caching'
 end
-gem 'rails-observers'
+gem 'rails-observers', '>= 0.1.4'
 
 #gem 'redis-rails'
 gem 'hiredis'
@@ -153,7 +153,7 @@ gem 'rack-protection' # security
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 5.0.8'
   gem 'uglifier'
 end
 
