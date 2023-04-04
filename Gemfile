@@ -67,16 +67,16 @@ end
 
 # see: https://github.com/mbleigh/seed-fu/pull/54
 # taking forever to get changes upstream in seed-fu
-gem 'seed-fu-discourse', require: 'seed-fu'
+gem 'seed-fu-discourse', '>= 2.2.1', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
+  gem 'rails', '>= 6.1.7.3', '>= 6.1.7.3', git: 'https://github.com/rails/rails.git'
+  gem 'actionpack-action_caching', '>= 1.2.1', '>= 1.2.1', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
   gem 'actionpack-action_caching'
 end
-gem 'rails-observers'
+gem 'rails-observers', '>= 0.1.4'
 
 #gem 'redis-rails'
 gem 'hiredis'
@@ -85,24 +85,24 @@ gem 'redis', :require => ["redis", "redis/connection/hiredis"]
 gem 'active_model_serializers'
 
 
-gem 'onebox'
+gem 'onebox', '>= 1.8.3'
 
 gem 'ember-rails'
-gem 'ember-source', '~> 1.2.0.1'
-gem 'handlebars-source', '~> 1.1.2'
+gem 'ember-source', '~> 1.10.0.0'
+gem 'handlebars-source', '~> 4.0.0'
 gem 'barber'
 
-gem 'message_bus'
+gem 'message_bus', '>= 3.3.7'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 
-gem 'redcarpet', require: false
+gem 'redcarpet', '>= 3.5.1', require: false
 gem 'airbrake', '3.1.2', require: false # errbit is broken with 3.1.3 for now
 gem 'eventmachine'
 gem 'fast_xs'
 
 gem 'fast_xor'
 gem 'fastimage'
-gem 'fog', '1.18.0', require: false
+gem 'fog', '1.21.0', require: false
 gem 'unf', require: false
 
 # see: https://twitter.com/samsaffron/status/412360162297393152
@@ -121,40 +121,40 @@ gem 'image_optim', '0.9.1'
 gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
-gem 'omniauth'
-gem 'omniauth-openid'
+gem 'nokogiri', '>= 1.13.9'
+gem 'omniauth', '>= 2.1.0'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'openid-redis-store'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
-gem 'omniauth-github'
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-github', '>= 2.0.0'
+gem 'omniauth-oauth2', '>= 1.7.1', require: false
 gem 'oj'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
 gem 'pg', '0.15.1'
-gem 'rake'
+gem 'rake', '>= 12.3.3'
 
 
-gem 'rest-client'
+gem 'rest-client', '>= 1.8.0'
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 4.6.3'
 gem 'sass'
-gem 'sidekiq'
+gem 'sidekiq', '>= 6.2.1'
 gem 'sidekiq-failures'
-gem 'sinatra', require: nil
+gem 'sinatra', '>= 2.2.3', require: nil
 gem 'slim'  # required for sidekiq-web
 
 gem 'therubyracer'
 gem 'thin', require: false
 gem 'highline', require: false
-gem 'rack-protection' # security
+gem 'rack-protection' , '>= 2.0.0' # security
 
 # Gems used only for assets and not required
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails'
-  gem 'uglifier'
+  gem 'sass-rails', '>= 5.0.8'
+  gem 'uglifier', '>= 2.7.2'
 end
 
 group :test do
@@ -170,7 +170,7 @@ group :test, :development do
   gem 'qunit-rails'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
-  gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
+  gem 'rb-inotify', '~> 0.9', '>= 0.9.3', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
   gem 'rspec-rails', require: false
   gem 'shoulda', require: false
   gem 'simplecov', require: false
@@ -182,7 +182,7 @@ group :test, :development do
 end
 
 group :development do
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
   gem 'annotate'
@@ -205,12 +205,12 @@ gem 'lru_redux'
 #  we are open to it. by deferring require to the initializer we can configure discourse installs without it
 
 gem 'flamegraph', require: false
-gem 'rack-mini-profiler', require: false
+gem 'rack-mini-profiler', '>= 0.10.1', require: false
 
 # used for caching, optional
-gem 'rack-cors', require: false
+gem 'rack-cors', '>= 1.0.5', require: false
 gem 'unicorn', require: false
-gem 'puma', require: false
+gem 'puma', '>= 4.3.12', require: false
 gem 'rbtrace', require: false, platform: :mri
 
 # required for feed importing and embedding
