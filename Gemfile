@@ -70,8 +70,8 @@ end
 gem 'seed-fu-discourse', require: 'seed-fu'
 
 if rails_master?
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
+  gem 'rails', '>= 6.1.7.4', '>= 6.1.7.4', git: 'https://github.com/rails/rails.git'
+  gem 'actionpack-action_caching', '>= 1.2.1', '>= 1.2.1', git: 'https://github.com/rails/actionpack-action_caching.git'
 else
   gem 'rails'
   gem 'actionpack-action_caching'
@@ -87,7 +87,7 @@ gem 'active_model_serializers'
 
 gem 'onebox'
 
-gem 'ember-rails'
+gem 'ember-rails', '>= 0.15.0'
 gem 'ember-source', '~> 1.2.0.1'
 gem 'handlebars-source', '~> 1.1.2'
 gem 'barber'
@@ -153,7 +153,7 @@ gem 'rack-protection' # security
 # in production environments by default.
 # allow everywhere for now cause we are allowing asset debugging in prd
 group :assets do
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 5.0.8'
   gem 'uglifier'
 end
 
@@ -171,7 +171,7 @@ group :test, :development do
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '>= 2.14.2', require: false
   gem 'shoulda', require: false
   gem 'simplecov', require: false
   gem 'timecop'
