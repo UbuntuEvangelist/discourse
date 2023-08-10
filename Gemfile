@@ -185,7 +185,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'librarian', '>= 0.0.25', require: false
-  gem 'annotate'
+  gem 'annotate', '>= 2.6.2'
 end
 
 # Gem that enables support for plugins. It is required.
