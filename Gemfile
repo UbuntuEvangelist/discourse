@@ -139,8 +139,8 @@ gem 'rest-client'
 gem 'rinku'
 gem 'sanitize'
 gem 'sass'
-gem 'sidekiq'
-gem 'sidekiq-failures'
+gem 'sidekiq', '>= 7.1.3'
+gem 'sidekiq-failures', '>= 0.4.0'
 gem 'sinatra', require: nil
 gem 'slim'  # required for sidekiq-web
 
