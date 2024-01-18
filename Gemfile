@@ -76,7 +76,7 @@ else
   gem 'rails'
   gem 'actionpack-action_caching'
 end
-gem 'rails-observers'
+gem 'rails-observers', '>= 0.1.4'
 
 #gem 'redis-rails'
 gem 'hiredis'
@@ -87,7 +87,7 @@ gem 'active_model_serializers'
 
 gem 'onebox'
 
-gem 'ember-rails'
+gem 'ember-rails', '>= 0.15.0'
 gem 'ember-source', '~> 1.2.0.1'
 gem 'handlebars-source', '~> 1.1.2'
 gem 'barber'
